@@ -23,13 +23,13 @@ taxo_id,specie,blast_name,genbank_common_name,accession_number,mtDNA
 219595,Cygnus cygnus,birds,common whooper,NC_027095,https://www.ncbi.nlm.nih.gov/nucleotide/NC_027095.1
 59729,Taeniopygia guttata,birds,zebra finch,NC_007897,https://www.ncbi.nlm.nih.gov/nucleotide/NC_007897.1
 9233,Aptenodytes forsteri,birds,emperor penguin,NC_027938,https://www.ncbi.nlm.nih.gov/nucleotide/NC_027938.1
-9606,Homo sapiens,Homo sapiens,Homo,CP139510,https://www.ncbi.nlm.nih.gov/nuccore/CP139510
-9598,Pan troglodytes,Pan troglodytes,Pan,NC_001643,https://www.ncbi.nlm.nih.gov/nuccore/NC_001643
-9612,Canis lupus,Canis lupus,Canis,MH891616,https://www.ncbi.nlm.nih.gov/nuccore/MH891616
-9685,Felis catus,Felis catus,Felis,NC_001700,https://www.ncbi.nlm.nih.gov/nuccore/NC_001700
-10090,Mus musculus,Mus musculus,Mus,EU450583,https://www.ncbi.nlm.nih.gov/nuccore/EU450583
-9694,Panthera tigris,Panthera tigris,Panthera,KJ508413,https://www.ncbi.nlm.nih.gov/nuccore/KJ508413
-39947,Oryza sativa,Oryza sativa Japonica Group,Oryza,BA000010,https://www.ncbi.nlm.nih.gov/nuccore/BA000010
-3702,Arabidopsis thaliana,Arabidopsis thaliana,Arabidopsis,NC_003070,https://www.ncbi.nlm.nih.gov/nuccore/NC_003070
-7227,Drosophila melanogaster,Drosophila melanogaster,Drosophila,U37541,https://www.ncbi.nlm.nih.gov/nuccore/U37541
-6239,Caenorhabditis elegans,Caenorhabditis elegans,Caenorhabditis,CM003212,https://www.ncbi.nlm.nih.gov/nuccore/CM003212
+9606,Homo sapiens,Homo sapiens,human,CP139510,https://www.ncbi.nlm.nih.gov/nuccore/CP139510
+9598,Pan troglodytes,Pan troglodytes,chimpanzee,NC_001643,https://www.ncbi.nlm.nih.gov/nuccore/NC_001643
+9612,Canis lupus,Canis lupus,gray wolf,MH891616,https://www.ncbi.nlm.nih.gov/nuccore/MH891616
+9685,Felis catus,Felis catus,domestic cat,NC_001700,https://www.ncbi.nlm.nih.gov/nuccore/NC_001700
+10090,Mus musculus,Mus musculus,house mouse,EU450583,https://www.ncbi.nlm.nih.gov/nuccore/EU450583
+9694,Panthera tigris,Panthera tigris,tiger,KJ508413,https://www.ncbi.nlm.nih.gov/nuccore/KJ508413
+1192867,Chroicocephalus ridibundus,Chroicocephalus ridibundus,black-headed gull,NC_025649,https://www.ncbi.nlm.nih.gov/nuccore/NC_025649
+7726,Styela plicata,Styela plicata,solitary sea squirt,NC_013565,https://www.ncbi.nlm.nih.gov/nuccore/NC_013565
+8467,Caretta caretta,Caretta caretta,Loggerhead turtle,NC_016923,https://www.ncbi.nlm.nih.gov/nuccore/NC_016923
+6239,Caenorhabditis elegans,Caenorhabditis elegans,mitochondrion Caenorhabditis elegan,CM003212,https://www.ncbi.nlm.nih.gov/nuccore/CM003212
