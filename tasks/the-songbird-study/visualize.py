@@ -232,9 +232,11 @@ def plot_violin(df, gene, gene_name):
         'KF': 'Known Female Reunited',
         'NF': 'Novel Female'
     }
+    df_c = df.copy()
+    df_c['social_settting'] = df_c['social_settting'].map(social_setting_map)
 
-    array = df[['social_settting', 'study_group', 'tissue_id', gene]]
-    df['social_settting'] = df['social_settting'].map(social_setting_map)
+
+    array = df_c[['social_settting', 'study_group', 'tissue_id', gene]]
 
     sns.set(style="whitegrid")
     plt.figure(figsize=(10, 6))

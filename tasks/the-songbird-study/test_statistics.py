@@ -314,3 +314,67 @@ def anova_between_social_settings(df, gene, social_settings=['ISO', 'KFC', 'KF',
     print(f"Effect Size: {effect_size}")
     
     print("-" * 30)
+
+
+def t_test_between_study_groups(df, gene):
+    """
+    Perform an independent two-sample t-test between study groups for a specific gene.
+
+    Parameters:
+    - df (pd.DataFrame): DataFrame containing gene expression data.
+    - gene (str): Gene identifier or name.
+
+    This function conducts an independent two-sample t-test to compare the gene expression levels
+    between two study groups ('S' and 'L') for a specific gene.
+
+    Example:
+    ```python
+    import pandas as pd
+
+    # Assuming 't_test_between_study_groups' function is available
+
+    # Create a DataFrame with gene expression data
+    gene_expression_df = pd.DataFrame({
+        'study_group': ['L', 'S', 'L', 'S', 'L', 'S', 'L', 'S'],
+        'tissue_id': ['T1', 'T2', 'T3', 'T4', 'T5', 'T6', 'T7', 'T8'],
+        'ENSG00000133703': [10, 5, 8, 15, 12, 7, 9, 14]
+    })
+
+    # Perform t-test between study groups for a specific gene
+    t_test_between_study_groups(gene_expression_df, 'ENSG00000133703')
+    ```
+
+    Note: Ensure the 'query_gene', 'annotate_gene_ids', and 'ttest_ind' functions are defined
+    and available before using this function. The specified gene must be present in the DataFrame.
+    """
+    gene = query_gene(df, gene)
+    if gene is None:
+        print("Gene Not Found")
+        return
+    group_s = df[(df['study_group'] == 'S') & (df[gene].notna())][gene]
+    group_l = df[(df['study_group'] == 'L') & (df[gene].notna())][gene]
+
+    t_statistic, p_value = ttest_ind(group_s, group_l)
+
+    print(f"Gene: {annotate_gene_ids([gene], 59729).get(gene, 'NA')}")
+    print(f"Ensemble ID: {gene}")
+    print(f"T-Statistic: {t_statistic}")
+    print(f"P-Value: {p_value}")
+    
+    if p_value < 0.05:
+        print("The difference in means is statistically significant (p < 0.05).")
+    else:
+        print("The difference in means is not statistically significant (p >= 0.05).")
+
+    effect_size = (group_s.mean() - group_l.mean()) / group_s.std()
+    print(f"Effect Size: {effect_size}")
+    
+    if t_statistic > 0:
+        print("The mean of study group 'S' is greater than the mean of study group 'L'.")
+    elif t_statistic < 0:
+        print("The mean of study group 'L' is greater than the mean of study group 'S'.")
+    else:
+        print("The means of study group 'S' and 'L' are equal.")
+    print("-" * 30)
+
+
