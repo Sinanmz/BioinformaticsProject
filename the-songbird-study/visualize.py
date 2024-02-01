@@ -419,6 +419,7 @@ def make_heatmap(df, gene):
     """
     gene = query_gene(df, gene)
     if gene is None:
+        print("Gene Not Found")
         return
 
     array = df[['sample_id', 'social_settting', 'study_group', 'tissue_id', gene]].to_numpy()
@@ -469,6 +470,7 @@ def make_violin_plot(df, gene):
     """
     gene = query_gene(df, gene)
     if gene is None:
+        print("Gene Not Found")
         return
 
     gene_name = annotate_gene_ids([gene], 59729).get(gene, 'NA')
@@ -523,6 +525,7 @@ def make_scatter_plot(df, gene1, gene2):
     gene2 = query_gene(df, gene2)
 
     if gene1 is None or gene2 is None:
+        print("Gene Not Found")
         return
 
     gene_names = annotate_gene_ids([gene1, gene2], 59729)
