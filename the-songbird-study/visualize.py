@@ -4,7 +4,6 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 import mygene
 
-# In this cell I wrote some helper functions to make the code more readable:
 def query_gene(df, gene):
     """
     Query the gene using MyGeneInfo if not found in the DataFrame.
@@ -381,7 +380,6 @@ def plot_scatter(df_scatter, gene1, gene2, gene_names):
 
 
 
-    # Main function to create a heatmap for gene expression:
 def make_heatmap(df, gene):
     """
     Creates a heatmap to visualize gene expression across different study groups and social settings.
@@ -433,7 +431,6 @@ def make_heatmap(df, gene):
     plot_heatmap(heatmap, gene, gene_name)
 
 
-# Main function to create a violin plot for gene expression:
 def make_violin_plot(df, gene):
     """
     Creates a violin plot to visualize the distribution of gene expression across different study groups and social settings.
@@ -481,7 +478,6 @@ def make_violin_plot(df, gene):
     plot_violin(df, gene, gene_name)
 
 
-# Main function to create a scatter plot for gene expression:
 def make_scatter_plot(df, gene1, gene2):
     """
     Creates a scatter plot to visualize the distribution of gene expressions across different study groups and social settings.
