@@ -2,6 +2,7 @@
 
 # Load the DESeq2 library
 library(DESeq2)
+library(EnhancedVolcano)
 
 # Read input arguments
 args <- commandArgs(TRUE)
@@ -64,6 +65,12 @@ if (gr == '0') {
   
   # Save results to a CSV file
   write.csv(as.data.frame(results), file = output_file_path)
+
+  # Create and save volcano plot
+  volcano_plot <- EnhancedVolcano(results, lab = NA, x = 'log2FoldChange', y = 'padj')
+  output_file_path <- gsub(".csv$", "", output_file_path)
+  volcano_plot_file <- paste0(output_file_path, "_volcano_plot.png")
+  ggsave(volcano_plot_file, plot = volcano_plot, width = 8, height = 6)
 } else {
   # For custom comparison between two social settings
   
@@ -100,4 +107,10 @@ if (gr == '0') {
   
   # Save results to a CSV file
   write.csv(as.data.frame(results), file = output_file_path)
+
+  # Create and save volcano plot
+  volcano_plot <- EnhancedVolcano(results, lab = NA, x = 'log2FoldChange', y = 'padj')
+  output_file_path <- gsub(".csv$", "", output_file_path)
+  volcano_plot_file <- paste0(output_file_path, "_volcano_plot.png")
+  ggsave(volcano_plot_file, plot = volcano_plot, width = 8, height = 6)
 }
