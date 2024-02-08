@@ -1,6 +1,6 @@
 # Description: This script performs DESeq2 analysis on RNA-seq count data.
 
-# Load the DESeq2 library
+# Load the necessary libraries
 library(DESeq2)
 library(EnhancedVolcano)
 
