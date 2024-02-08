@@ -1,0 +1,753 @@
+      Logging screen output to file "logmrbayes.txt"
+      Setting autoclose to yes
+      Setting nowarnings to yes
+      Setting Nst to 6
+      Setting Rates to Invgamma
+      Successfully set likelihood model parameters
+      Setting Statefreqpr to Dirichlet(1.00,1.00,1.00,1.00)
+      Successfully set prior model parameters
+      Setting Ratepr to Variable [Dirichlet(..,1,..)] for partition 1
+      Successfully set prior model parameters
+      Setting number of generations to 15000
+      Using relative burnin (a fraction of samples discarded).
+      Setting burnin fraction to 0.25
+      Setting print frequency to 1000
+      Setting sample frequency to 1000
+      Setting number of chains to 4
+      Successfully set chain parameters
+      Running Markov chain
+      MCMC stamp = 7305655639
+      Seed = 1857411961
+      Swapseed = 1707397574
+      Model settings:
+
+         Data not partitioned --
+            Datatype  = DNA
+            Nucmodel  = 4by4
+            Nst       = 6
+                        Substitution rates, expressed as proportions
+                        of the rate sum, have a Dirichlet prior
+                        (1.00,1.00,1.00,1.00,1.00,1.00)
+            Covarion  = No
+            # States  = 4
+                        State frequencies have a Dirichlet prior
+                        (1.00,1.00,1.00,1.00)
+            Rates     = Invgamma
+                        The distribution is approximated using 4 categories.
+                        Likelihood summarized over all rate categories in each generation.
+                        Shape parameter is exponentially
+                        distributed with parameter (1.00).
+                        Proportion of invariable sites is uniformly dist-
+                        ributed on the interval (0.00,1.00).
+
+      Active parameters: 
+
+         Parameters
+         ---------------------
+         Revmat              1
+         Statefreq           2
+         Shape               3
+         Pinvar              4
+         Ratemultiplier      5
+         Topology            6
+         Brlens              7
+         ---------------------
+
+         1 --  Parameter  = Revmat
+               Type       = Rates of reversible rate matrix
+               Prior      = Dirichlet(1.00,1.00,1.00,1.00,1.00,1.00)
+
+         2 --  Parameter  = Pi
+               Type       = Stationary state frequencies
+               Prior      = Dirichlet
+
+         3 --  Parameter  = Alpha
+               Type       = Shape of scaled gamma distribution of site rates
+               Prior      = Exponential(1.00)
+
+         4 --  Parameter  = Pinvar
+               Type       = Proportion of invariable sites
+               Prior      = Uniform(0.00,1.00)
+
+         5 --  Parameter  = Ratemultiplier
+               Type       = Partition-specific rate multiplier
+               Prior      = Dirichlet(1.00)
+
+         6 --  Parameter  = Tau
+               Type       = Topology
+               Prior      = All topologies equally probable a priori
+               Subparam.  = V
+
+         7 --  Parameter  = V
+               Type       = Branch lengths
+               Prior      = Unconstrained:GammaDir(1.0,0.1000,1.0,1.0)
+
+
+
+      The MCMC sampler will use the following moves:
+         With prob.  Chain will use move
+            0.90 %   Dirichlet(Revmat)
+            0.90 %   Slider(Revmat)
+            0.90 %   Dirichlet(Pi)
+            0.90 %   Slider(Pi)
+            1.80 %   Multiplier(Alpha)
+            1.80 %   Slider(Pinvar)
+            1.35 %   Dirichlet(Ratemultiplier)
+            1.35 %   Slider(Ratemultiplier)
+            9.01 %   ExtSPR(Tau,V)
+            9.01 %   ExtTBR(Tau,V)
+            9.01 %   NNI(Tau,V)
+            9.01 %   ParsSPR(Tau,V)
+           36.04 %   Multiplier(V)
+           12.61 %   Nodeslider(V)
+            5.41 %   TLMultiplier(V)
+
+      Division 1 has 16522 unique site patterns
+      Initializing conditional likelihoods
+      Using standard SSE likelihood calculator for division 1 (single-precision)
+      Initializing invariable-site conditional likelihoods
+
+      Initial log likelihoods and log prior probs for run 1:
+         Chain 1 -- -582465.077626 -- 88.401526
+         Chain 2 -- -559523.941859 -- 88.401526
+         Chain 3 -- -567689.691702 -- 88.401526
+         Chain 4 -- -560808.915646 -- 88.401526
+
+      Initial log likelihoods and log prior probs for run 2:
+         Chain 1 -- -576032.969024 -- 88.401526
+         Chain 2 -- -569909.711361 -- 88.401526
+         Chain 3 -- -577144.754949 -- 88.401526
+         Chain 4 -- -559184.325810 -- 88.401526
+
+
+      Using a relative burnin of 25.0 % for diagnostics
+
+      Chain results (15000 generations requested):
+
+          0 -- [-582465.078] (-559523.942) (-567689.692) (-560808.916) * [-576032.969] (-569909.711) (-577144.755) (-559184.326) 
+       1000 -- [-376662.452] (-379420.771) (-386759.503) (-380234.549) * (-386659.032) (-396229.703) (-381358.716) [-379693.702] -- 0:11:40
+       2000 -- (-365214.368) (-368165.936) [-362394.115] (-363610.681) * (-368471.141) (-375445.735) (-368248.399) [-367196.932] -- 0:10:30
+       3000 -- (-359834.755) (-362784.743) [-358527.522] (-358955.201) * (-361724.751) (-367944.745) [-360602.976] (-362960.034) -- 0:09:32
+       4000 -- (-358151.287) (-360532.597) [-357915.094] (-358022.040) * (-359919.357) (-361383.932) [-358600.641] (-361204.137) -- 0:08:45
+       5000 -- (-357789.560) (-358264.912) (-357776.487) [-357748.679] * (-359582.599) (-358769.139) [-358448.993] (-360966.687) -- 0:08:00
+
+      Average standard deviation of split frequencies: 0.202456
+
+       6000 -- (-357720.362) (-357907.086) (-357708.360) [-357677.582] * (-358586.459) [-358199.224] (-358382.931) (-360780.938) -- 0:07:12
+       7000 -- (-357699.722) (-357757.424) [-357654.287] (-357670.720) * [-357727.207] (-357910.299) (-358343.153) (-360730.805) -- 0:06:24
+       8000 -- (-357687.675) (-357751.790) [-357647.402] (-357644.680) * [-357703.008] (-357785.632) (-358346.315) (-360699.760) -- 0:05:37
+       9000 -- (-357685.414) (-357669.019) (-357649.770) [-357639.007] * [-357688.336] (-357753.634) (-358315.366) (-360689.488) -- 0:04:48
+      10000 -- (-357676.814) (-357661.458) (-357652.752) [-357631.740] * [-357680.541] (-357751.185) (-358300.872) (-360657.995) -- 0:03:59
+
+      Average standard deviation of split frequencies: 0.168494
+
+      11000 -- (-357658.382) (-357649.345) (-357632.735) [-357605.848] * [-357674.754] (-357761.741) (-358271.076) (-360648.421) -- 0:03:10
+      12000 -- (-357663.005) (-357630.664) (-357629.966) [-357603.973] * [-357664.789] (-357754.111) (-358244.731) (-360644.304) -- 0:02:23
+      13000 -- (-357663.763) (-357636.235) (-357630.964) [-357608.133] * [-357653.392] (-357741.346) (-358250.074) (-360664.171) -- 0:01:35
+      14000 -- (-357679.726) (-357625.996) [-357611.652] (-357607.432) * [-357651.522] (-357749.374) (-358241.483) (-360661.769) -- 0:00:47
+      15000 -- (-357672.841) (-357628.216) (-357618.372) [-357611.595] * [-357647.309] (-357744.894) (-358256.000) (-360651.813) -- 0:00:00
+
+      Average standard deviation of split frequencies: 0.234611
+
+      Analysis completed in 11 mins 57 seconds
+      Analysis used 717.18 seconds of CPU time
+      Likelihood of best state for "cold" chain of run 1 was -357596.76
+      Likelihood of best state for "cold" chain of run 2 was -357597.87
+
+      Acceptance rates for the moves in the "cold" chain of run 1:
+         With prob.   (last 100)   chain accepted proposals by move
+             9.6 %     ( 13 %)     Dirichlet(Revmat)
+            19.4 %     ( 25 %)     Slider(Revmat)
+             5.5 %     (  6 %)     Dirichlet(Pi)
+             7.0 %     (  8 %)     Slider(Pi)
+             4.9 %     (  2 %)     Multiplier(Alpha)
+            18.3 %     ( 19 %)     Slider(Pinvar)
+            16.9 %     ( 27 %)     Dirichlet(Ratemultiplier)
+            31.7 %     ( 32 %)     Slider(Ratemultiplier)
+             2.3 %     (  0 %)     ExtSPR(Tau,V)
+             2.2 %     (  1 %)     ExtTBR(Tau,V)
+             3.0 %     (  0 %)     NNI(Tau,V)
+             1.5 %     (  0 %)     ParsSPR(Tau,V)
+            20.3 %     ( 21 %)     Multiplier(V)
+             9.2 %     (  5 %)     Nodeslider(V)
+             2.9 %     (  2 %)     TLMultiplier(V)
+
+      Acceptance rates for the moves in the "cold" chain of run 2:
+         With prob.   (last 100)   chain accepted proposals by move
+            18.3 %     ( 23 %)     Dirichlet(Revmat)
+            22.0 %     ( 27 %)     Slider(Revmat)
+             4.5 %     (  6 %)     Dirichlet(Pi)
+            14.7 %     ( 20 %)     Slider(Pi)
+             7.6 %     (  5 %)     Multiplier(Alpha)
+            15.9 %     ( 12 %)     Slider(Pinvar)
+             7.4 %     ( 14 %)     Dirichlet(Ratemultiplier)
+            32.0 %     ( 38 %)     Slider(Ratemultiplier)
+             2.4 %     (  0 %)     ExtSPR(Tau,V)
+             1.8 %     (  0 %)     ExtTBR(Tau,V)
+             2.4 %     (  0 %)     NNI(Tau,V)
+             1.3 %     (  0 %)     ParsSPR(Tau,V)
+            21.3 %     ( 28 %)     Multiplier(V)
+             9.7 %     (  5 %)     Nodeslider(V)
+             2.9 %     (  2 %)     TLMultiplier(V)
+
+      Chain swap information for run 1:
+
+                 1     2     3     4 
+           --------------------------
+         1 |        0.29  0.03  0.00 
+         2 |  2443        0.25  0.02 
+         3 |  2578  2492        0.16 
+         4 |  2461  2473  2553       
+
+      Chain swap information for run 2:
+
+                 1     2     3     4 
+           --------------------------
+         1 |        0.01  0.00  0.00 
+         2 |  2567        0.01  0.00 
+         3 |  2499  2533        0.00 
+         4 |  2456  2433  2512       
+
+      Upper diagonal: Proportion of successful state exchanges between chains
+      Lower diagonal: Number of attempted state exchanges between chains
+
+      Chain information:
+
+        ID -- Heat 
+       -----------
+         1 -- 1.00  (cold chain)
+         2 -- 0.91 
+         3 -- 0.83 
+         4 -- 0.77 
+
+      Heat = 1 / (1 + T * (ID - 1))
+         (where T = 0.10 is the temperature and ID is the chain number)
+
+
+      ************************* WARNING!! ************************************  
+      MrBayes suspects that your runs have not converged because the tree       
+      samples are very different (average standard deviation of split frequen-  
+      cies larger than 0.10 (0.23)). MrBayes suggests that you run the ana-   
+      lysis longer or try to improve the MCMC sampling efficiency by fine-      
+      tuning MCMC proposal or heating parameters.                               
+      Summarizing trees in files "aligned_mrbayes.nex.run1.t" and "aligned_mrbayes.nex.run2.t"
+      Using relative burnin ('relburnin=yes'), discarding the first 25 % of sampled trees
+      Writing statistics to files aligned_mrbayes.nex.<parts|tstat|vstat|trprobs|con>
+      Examining first file ...
+      Found one tree block in file "aligned_mrbayes.nex.run1.t" with 16 trees in last block
+      Expecting the same number of trees in the last tree block of all files
+
+      Tree reading status:
+
+      0      10      20      30      40      50      60      70      80      90     100
+      v-------v-------v-------v-------v-------v-------v-------v-------v-------v-------v
+      *********************************************************************************
+
+      Read a total of 32 trees in 2 files (sampling 24 of them)
+         (Each file contained 16 trees of which 12 were sampled)
+                                                                                   
+      General explanation:                                                          
+                                                                                   
+      In an unrooted tree, a taxon bipartition (split) is specified by removing a   
+      branch, thereby dividing the species into those to the left and those to the  
+      right of the branch. Here, taxa to one side of the removed branch are denoted 
+      '.' and those to the other side are denoted '*'. Specifically, the '.' symbol 
+      is used for the taxa on the same side as the outgroup.                        
+                                                                                   
+      In a rooted or clock tree, the tree is rooted using the model and not by      
+      reference to an outgroup. Each bipartition therefore corresponds to a clade,  
+      that is, a group that includes all the descendants of a particular branch in  
+      the tree.  Taxa that are included in each clade are denoted using '*', and    
+      taxa that are not included are denoted using the '.' symbol.                  
+                                                                                   
+      The output first includes a key to all the bipartitions with frequency larger 
+      or equual to (Minpartfreq) in at least one run. Minpartfreq is a parameter to 
+      sumt command and currently it is set to 0.10.  This is followed by a table  
+      with statistics for the informative bipartitions (those including at least    
+      two taxa), sorted from highest to lowest probability. For each bipartition,   
+      the table gives the number of times the partition or split was observed in all
+      runs (#obs) and the posterior probability of the bipartition (Probab.), which 
+      is the same as the split frequency. If several runs are summarized, this is   
+      followed by the minimum split frequency (Min(s)), the maximum frequency       
+      (Max(s)), and the standard deviation of frequencies (Stddev(s)) across runs.  
+      The latter value should approach 0 for all bipartitions as MCMC runs converge.
+                                                                                   
+      This is followed by a table summarizing branch lengths, node heights (if a    
+      clock model was used) and relaxed clock parameters (if a relaxed clock model  
+      was used). The mean, variance, and 95 % credible interval are given for each 
+      of these parameters. If several runs are summarized, the potential scale      
+      reduction factor (PSRF) is also given; it should approach 1 as runs converge. 
+      Node heights will take calibration points into account, if such points were   
+      used in the analysis.                                                         
+                                                                                    
+      Note that Stddev may be unreliable if the partition is not present in all     
+      runs (the last column indicates the number of runs that sampled the partition 
+      if more than one run is summarized). The PSRF is not calculated at all if     
+      the partition is not present in all runs.The PSRF is also sensitive to small  
+      sample sizes and it should only be considered a rough guide to convergence    
+      since some of the assumptions allowing one to interpret it as a true potential
+      scale reduction factor are violated in MrBayes.                               
+                                                                                    
+      List of taxa in bipartitions:                                                 
+                                                                                   
+         1 -- Eudynamys_scolopaceus_NC_060520
+         2 -- Apis_mellifera_NC_051932
+         3 -- Pelecanus_crispus_OR620163
+         4 -- Rattus_norvegicus_NC_001665
+         5 -- Gallus_gallus_NC_053523
+         6 -- Myotis_lucifugus_NC_029849
+         7 -- Tribolium_castaneum_NC_003081
+         8 -- Anser_cygnoides_NC_023832
+         9 -- Ovis_aries_NC_001941
+        10 -- Tyto_alba_MZ318036
+        11 -- Drosophila_melanogaster_NC_024511
+        12 -- Apteryx_australis_MN356385
+        13 -- Spheniscus_demersus_NC_022817
+        14 -- Corvus_brachyrhynchos_NC_026461
+        15 -- Mus_musculus_NC_005089
+        16 -- Dromaius_novaehollandiae_NC_002784
+        17 -- Anas_platyrhynchos_NC_009684
+        18 -- Pteropus_vampyrus_NC_026542
+        19 -- Struthio_camelus_NC_002785
+        20 -- Aquila_nipalensis_NC_045042
+        21 -- Cygnus_cygnus_NC_027095
+        22 -- Taeniopygia_guttata_NC_007897
+        23 -- Aptenodytes_forsteri_NC_027938
+        24 -- Homo_sapiens_CP139510
+        25 -- Pan_troglodytes_NC_001643
+        26 -- Canis_lupus_MH891616
+        27 -- Felis_catus_NC_001700
+        28 -- Miichthys_miiuy_NC_014351
+        29 -- Panthera_tigris_KJ508413
+        30 -- Chroicocephalus_ridibundus_NC_025649
+        31 -- Styela_plicata_NC_013565
+        32 -- Caretta_caretta_NC_016923
+        33 -- Caenorhabditis_elegans_CM003212
+
+      Key to taxon bipartitions (saved to file "aligned_mrbayes.nex.parts"):
+
+      ID -- Partition
+      ---------------------------------------
+       1 -- 
+       2 -- 
+       3 -- 
+       4 -- 
+       5 -- 
+       6 -- 
+       7 -- 
+       8 -- 
+       9 -- 
+      10 -- 
+      11 -- 
+      12 -- 
+      13 -- 
+      14 -- 
+      15 -- 
+      16 -- 
+      17 -- 
+      18 -- 
+      19 -- 
+      20 -- 
+      21 -- 
+      22 -- 
+      23 -- 
+      24 -- 
+      25 -- 
+      26 -- 
+      27 -- 
+      28 -- 
+      29 -- 
+      30 -- 
+      31 -- 
+      32 -- 
+      33 -- 
+      34 -- 
+      35 -- 
+      36 -- 
+      37 -- 
+      38 -- 
+      39 -- 
+      40 -- 
+      41 -- 
+      42 -- 
+      43 -- 
+      44 -- 
+      45 -- 
+      46 -- 
+      47 -- 
+      48 -- 
+      49 -- 
+      50 -- 
+      51 -- 
+      52 -- 
+      53 -- 
+      54 -- 
+      55 -- 
+      56 -- 
+      57 -- 
+      58 -- 
+      59 -- 
+      60 -- 
+      61 -- 
+      62 -- 
+      63 -- 
+      64 -- 
+      65 -- 
+      66 -- 
+      67 -- 
+      68 -- 
+      69 -- 
+      70 -- 
+      71 -- 
+      72 -- 
+      73 -- 
+      74 -- 
+      75 -- 
+      76 -- 
+      77 -- 
+      78 -- 
+      79 -- 
+      80 -- 
+      81 -- 
+      82 -- 
+      83 -- 
+      84 -- 
+      85 -- 
+      86 -- 
+      87 -- 
+      ---------------------------------------
+
+      Summary statistics for informative taxon bipartitions
+         (saved to file "aligned_mrbayes.nex.tstat"):
+
+      ID   #obs    Probab.     Sd(s)+      Min(s)      Max(s)   Nruns 
+      ----------------------------------------------------------------
+      34    24    1.000000    0.000000    1.000000    1.000000    2
+      35    24    1.000000    0.000000    1.000000    1.000000    2
+      36    24    1.000000    0.000000    1.000000    1.000000    2
+      37    24    1.000000    0.000000    1.000000    1.000000    2
+      38    24    1.000000    0.000000    1.000000    1.000000    2
+      39    24    1.000000    0.000000    1.000000    1.000000    2
+      40    24    1.000000    0.000000    1.000000    1.000000    2
+      41    24    1.000000    0.000000    1.000000    1.000000    2
+      42    24    1.000000    0.000000    1.000000    1.000000    2
+      43    24    1.000000    0.000000    1.000000    1.000000    2
+      44    24    1.000000    0.000000    1.000000    1.000000    2
+      45    24    1.000000    0.000000    1.000000    1.000000    2
+      46    23    0.958333    0.058926    0.916667    1.000000    2
+      47    23    0.958333    0.058926    0.916667    1.000000    2
+      48    23    0.958333    0.058926    0.916667    1.000000    2
+      49    23    0.958333    0.058926    0.916667    1.000000    2
+      50    22    0.916667    0.117851    0.833333    1.000000    2
+      51    21    0.875000    0.176777    0.750000    1.000000    2
+      52    21    0.875000    0.176777    0.750000    1.000000    2
+      53    18    0.750000    0.235702    0.583333    0.916667    2
+      54    17    0.708333    0.058926    0.666667    0.750000    2
+      55    15    0.625000    0.530330    0.250000    1.000000    2
+      56    13    0.541667    0.648181    0.083333    1.000000    2
+      57    13    0.541667    0.648181    0.083333    1.000000    2
+      58    13    0.541667    0.648181    0.083333    1.000000    2
+      59    13    0.541667    0.648181    0.083333    1.000000    2
+      60    13    0.541667    0.648181    0.083333    1.000000    2
+      61    10    0.416667    0.353553    0.166667    0.666667    2
+      62     9    0.375000    0.530330    0.000000    0.750000    1 *
+      63     9    0.375000    0.530330    0.000000    0.750000    1 *
+      64     9    0.375000    0.530330    0.000000    0.750000    1 *
+      65     9    0.375000    0.530330    0.000000    0.750000    1 *
+      66     9    0.375000    0.530330    0.000000    0.750000    1 *
+      67     9    0.375000    0.530330    0.000000    0.750000    1 *
+      68     9    0.375000    0.530330    0.000000    0.750000    1 *
+      69     9    0.375000    0.530330    0.000000    0.750000    1 *
+      70     9    0.375000    0.530330    0.000000    0.750000    1 *
+      71     9    0.375000    0.412479    0.083333    0.666667    2
+      72     8    0.333333    0.471405    0.000000    0.666667    1 *
+      73     7    0.291667    0.058926    0.250000    0.333333    2
+      74     6    0.250000    0.117851    0.166667    0.333333    2
+      75     5    0.208333    0.176777    0.083333    0.333333    2
+      76     4    0.166667    0.235702    0.000000    0.333333    1 *
+      77     3    0.125000    0.176777    0.000000    0.250000    1 *
+      78     3    0.125000    0.058926    0.083333    0.166667    2
+      79     2    0.083333    0.117851    0.000000    0.166667    1 *
+      80     2    0.083333    0.117851    0.000000    0.166667    1 *
+      81     2    0.083333    0.117851    0.000000    0.166667    1 *
+      82     2    0.083333    0.117851    0.000000    0.166667    1 *
+      83     2    0.083333    0.117851    0.000000    0.166667    1 *
+      84     2    0.083333    0.117851    0.000000    0.166667    1 *
+      85     2    0.083333    0.117851    0.000000    0.166667    1 *
+      86     2    0.083333    0.117851    0.000000    0.166667    1 *
+      87     2    0.083333    0.117851    0.000000    0.166667    1 *
+      ----------------------------------------------------------------
+      + Convergence diagnostic (standard deviation of split frequencies)
+        should approach 0.0 as runs converge.
+
+      * The partition was not found in all runs so the values are unreliable
+
+      Summary statistics for branch and node parameters
+         (saved to file "aligned_mrbayes.nex.vstat"):
+
+                                              95% HPD Interval
+                                            --------------------
+      Parameter      Mean       Variance     Lower       Upper       Median     PSRF+  Nruns
+      --------------------------------------------------------------------------------------
+      length[1]     0.178178    0.000374    0.145721    0.206730    0.180301    1.713    2
+      length[2]     0.957706    0.007526    0.777969    1.079048    0.968052    1.613    2
+      length[3]     0.092927    0.002414    0.018535    0.139232    0.118200    2.306    2
+      length[4]     0.113125    0.000156    0.093725    0.135305    0.110250    1.732    2
+      length[5]     0.160771    0.000194    0.141545    0.183727    0.165602    2.075    2
+      length[6]     0.237799    0.000495    0.194667    0.265978    0.231986    2.682    2
+      length[7]     0.420891    0.002380    0.351969    0.483862    0.417746    1.647    2
+      length[8]     0.047426    0.000033    0.040477    0.057814    0.046628    1.728    2
+      length[9]     0.191810    0.000330    0.166648    0.217867    0.193849    2.400    2
+      length[10]    0.209072    0.000344    0.181046    0.236316    0.215133    2.059    2
+      length[11]    0.181280    0.000539    0.143147    0.213487    0.182983    1.288    2
+      length[12]    0.117987    0.000112    0.100211    0.136289    0.122252    1.789    2
+      length[13]    0.065061    0.000055    0.055486    0.074380    0.067457    1.773    2
+      length[14]    0.119933    0.000204    0.098927    0.138333    0.121664    1.830    2
+      length[15]    0.153844    0.000233    0.135467    0.179214    0.152530    1.896    2
+      length[16]    0.098276    0.000104    0.083759    0.114436    0.103012    1.885    2
+      length[17]    0.072374    0.000123    0.059169    0.083886    0.074503    1.487    2
+      length[18]    0.166915    0.000332    0.135827    0.190969    0.166212    2.049    2
+      length[19]    0.116846    0.000206    0.094303    0.139951    0.118349    1.948    2
+      length[20]    0.138460    0.000236    0.119437    0.156216    0.140533    2.247    2
+      length[21]    0.048589    0.000034    0.040044    0.056674    0.050562    1.946    2
+      length[22]    0.101060    0.000147    0.083611    0.117072    0.098763    1.974    2
+      length[23]    0.061876    0.000049    0.052083    0.069066    0.063201    1.891    2
+      length[24]    0.045116    0.000035    0.036105    0.056019    0.045756    1.681    2
+      length[25]    0.047588    0.000037    0.031222    0.055066    0.047455    1.803    2
+      length[26]    0.169882    0.000262    0.147408    0.193294    0.172089    1.982    2
+      length[27]    0.069738    0.000062    0.058339    0.080670    0.073297    1.725    2
+      length[28]    0.377469    0.001972    0.290067    0.433440    0.402825    2.849    2
+      length[29]    0.075479    0.000070    0.063193    0.084683    0.077772    1.717    2
+      length[30]    0.117284    0.000206    0.099239    0.134461    0.124240    3.296    2
+      length[31]    1.556950    2.220825    0.973484    5.378205    1.144753    1.043    2
+      length[32]    0.313314    0.001449    0.219654    0.367034    0.315682    1.798    2
+      length[33]    3.104328    3.453053    1.897111    8.959523    2.623766    1.105    2
+      length[34]    0.190179    0.000335    0.167320    0.212216    0.196999    1.375    2
+      length[35]    0.066295    0.000050    0.055559    0.078428    0.066702    2.505    2
+      length[36]    0.080672    0.000106    0.065985    0.095257    0.084020    1.725    2
+      length[37]    0.019822    0.000011    0.013314    0.025275    0.020904    0.971    2
+      length[38]    0.024188    0.000012    0.020562    0.031855    0.022921    1.087    2
+      length[39]    0.090686    0.000104    0.075771    0.108311    0.087028    1.541    2
+      length[40]    0.062852    0.000088    0.045482    0.075220    0.063706    1.860    2
+      length[41]    0.021179    0.000076    0.008049    0.030209    0.025917    2.558    2
+      length[42]    0.025941    0.000017    0.018081    0.031680    0.025833    1.215    2
+      length[43]    0.040544    0.000019    0.034263    0.048299    0.038753    1.274    2
+      length[44]    0.104803    0.000226    0.063001    0.120435    0.105324    1.659    2
+      length[45]    0.263405    0.002238    0.145034    0.320625    0.257596    1.627    2
+      length[46]    0.065270    0.000085    0.049460    0.078790    0.062856    1.840    2
+      length[47]    0.049600    0.000063    0.038476    0.060060    0.050670    1.746    2
+      length[48]    1.721241    0.023928    1.424114    1.932877    1.782139    1.542    2
+      length[49]    0.207723    0.000696    0.151498    0.259336    0.205313    0.967    2
+      length[50]    4.749914    0.272806    3.763645    5.184202    4.691242    1.200    2
+      length[51]    0.047368    0.000092    0.034050    0.064557    0.046612    1.332    2
+      length[52]    0.190394    0.001033    0.153467    0.243749    0.183908    1.124    2
+      length[53]    0.008367    0.000002    0.005951    0.010022    0.008863    0.965    2
+      length[54]    0.020280    0.000012    0.015089    0.024965    0.020434    1.259    2
+      length[55]    0.179488    0.000382    0.156959    0.191020    0.177281    1.039    2
+      length[56]    0.655544    0.241191    0.362972    0.697051    0.523486    0.920    2
+      length[57]    0.025621    0.000037    0.018498    0.032009    0.025521    0.920    2
+      length[58]    0.025321    0.000013    0.020548    0.030943    0.024843    0.920    2
+      length[59]    0.094554    0.000138    0.078744    0.111027    0.093770    0.920    2
+      length[60]    0.135830    0.004279    0.074386    0.141202    0.121282    0.920    2
+      length[61]    0.011501    0.000016    0.005056    0.017920    0.011939    0.895    2
+      length[62]    0.163124    0.000010    0.159776    0.170063    0.162876     NA      1 *
+      length[63]    0.014436    0.000006    0.010509    0.019007    0.013986     NA      1 *
+      length[64]    0.020392    0.000004    0.018080    0.023817    0.019725     NA      1 *
+      length[65]    0.013444    0.000004    0.009863    0.016297    0.014012     NA      1 *
+      length[66]    0.010814    0.000008    0.004372    0.014466    0.011098     NA      1 *
+      length[67]    0.074175    0.000190    0.054157    0.095627    0.079371     NA      1 *
+      length[68]    0.009337    0.000001    0.008211    0.011277    0.009081     NA      1 *
+      length[69]    0.101922    0.000196    0.083378    0.117702    0.103600     NA      1 *
+      length[70]    0.080115    0.000101    0.062761    0.093187    0.078141     NA      1 *
+      length[71]    0.012419    0.000010    0.007871    0.016744    0.012405    0.882    2
+      length[72]    0.013472    0.000001    0.012603    0.015299    0.013262     NA      1 *
+      length[73]    0.012819    0.000004    0.010658    0.015817    0.012150    0.928    2
+      length[74]    0.020852    0.000040    0.013191    0.028838    0.022888    0.824    2
+      length[75]    0.024343    0.000011    0.022210    0.030115    0.022822    0.775    2
+      length[76]    0.010765    0.000000    0.010412    0.011269    0.010834     NA      1 *
+      length[77]    0.006515    0.000001    0.005771    0.007457    0.006318     NA      1 *
+      length[78]    0.010132    0.000008    0.007942    0.013357    0.009097    0.577    2
+      length[79]    0.064797    0.000055    0.059542    0.070052    0.070052     NA      1 *
+      length[80]    0.255862    0.000004    0.254472    0.257252    0.257252     NA      1 *
+      length[81]    0.025163    0.000010    0.022872    0.027455    0.027455     NA      1 *
+      length[82]    0.016527    0.000041    0.012013    0.021040    0.021040     NA      1 *
+      length[83]    0.080141    0.000021    0.076930    0.083351    0.083351     NA      1 *
+      length[84]    0.050408    0.000008    0.048379    0.052437    0.052437     NA      1 *
+      length[85]    0.018127    0.000004    0.016665    0.019588    0.019588     NA      1 *
+      length[86]    0.069816    0.000070    0.063893    0.075739    0.075739     NA      1 *
+      length[87]    0.338230    0.000007    0.336393    0.340068    0.340068     NA      1 *
+      --------------------------------------------------------------------------------------
+      + Convergence diagnostic (PSRF = Potential Scale Reduction Factor; Gelman
+        and Rubin, 1992) should approach 1.0 as runs converge. NA is reported when
+        deviation of parameter values within all runs is 0 or when a parameter
+        value (a branch length, for instance) is not sampled in all runs.
+      * The partition was not found in all runs so the values are unreliable.
+
+
+      Summary statistics for partitions with frequency >= 0.10 in at least one run:
+          Average standard deviation of split frequencies = 0.234611
+          Maximum standard deviation of split frequencies = 0.648181
+          Average PSRF for parameter values (excluding NA and >10.0) = 1.589
+          Maximum PSRF for parameter values = 3.296
+
+
+      Clade credibility values:
+
+      Subtree rooted at node 51:
+
+                                                           /----- Apis_mellifera_~ (2)
+                                                     /--96-+                          
+                                                     |     \----- Drosophila_mel~ (11)
+                                                /-96-+                                
+                                                |    \----------- Tribolium_casta~ (7)
+                           /---------54---------+                                     
+                           |                    |          /----- Styela_plicata~ (31)
+                           |                    \----92----+                          
+                           |                               \----- Caenorhabditis~ (33)
+                           |                                                          
+                           |                               /----- Rattus_norvegic~ (4)
+                      /-54-+    /------------100-----------+                          
+                      |    |    |                          \----- Mus_musculus_N~ (15)
+                      |    |    |                                                     
+                      |    |    |                          /----- Myotis_lucifugu~ (6)
+                      |    |    |          /-------96------+                          
+                      |    |    |          |               \----- Pteropus_vampy~ (18)
+                      |    \-88-+          |                                          
+                      |         |     /-96-+    /---------------- Ovis_aries_NC_0~ (9)
+                      |         |     |    |    |                                     
+                      |         |     |    \-100+    /----------- Canis_lupus_MH~ (26)
+                 /-54-+         |     |         |    |                                
+                 |    |         |     |         \-100+     /----- Felis_catus_NC~ (27)
+                 |    |         \--88-+              \-100-+                          
+                 |    |               |                    \----- Panthera_tigri~ (29)
+                 |    |               |                                               
+                 |    |               |                    /----- Homo_sapiens_C~ (24)
+           /--63-+    |               \---------100--------+                          
+           |     |    |                                    \----- Pan_troglodyte~ (25)
+           |     |    |                                                               
+           |     |    \------------------------------------------ Miichthys_miiu~ (28)
+           |     |                                                                    
+      --54-+     \----------------------------------------------- Caretta_carett~ (32)
+           |                                                                          
+           |                                               /----- Apteryx_austra~ (12)
+           |                                         /-100-+                          
+           |                                         |     \----- Dromaius_novae~ (16)
+           \-------------------100-------------------+                                
+                                                     \----------- Struthio_camel~ (19)
+                                                                                      
+      Root part of tree:
+
+      /---------------------------------------------------------- Eudynamys_scolo~ (1)
+      |                                                                               
+      |---------------------------------------------------------- Tyto_alba_MZ31~ (10)
+      |                                                                               
+      |                  /--------------------------------------- (51)
+      |                  |                                                            
+      |                  |         /----------------------------- Gallus_gallus_N~ (5)
+      |         /---54---+         |                                                  
+      |         |        |         |                  /---------- Anser_cygnoides~ (8)
+      +         |        \---100---+         /---100--+                               
+      |         |                  |         |        \---------- Cygnus_cygnus_~ (21)
+      |         |                  \---100---+                                        
+      |         |                            \------------------- Anas_platyrhyn~ (17)
+      |         |                                                                     
+      |         |------------------------------------------------ Pelecanus_crisp~ (3)
+      |         |                                                                     
+      |         |                                     /---------- Spheniscus_dem~ (13)
+      \----71---+                            /---100--+                               
+                |                            |        \---------- Aptenodytes_fo~ (23)
+                |-------------75-------------+                                        
+                |                            \------------------- Aquila_nipalen~ (20)
+                |                                                                     
+                |                                     /---------- Corvus_brachyr~ (14)
+                |-----------------100-----------------+                               
+                |                                     \---------- Taeniopygia_gu~ (22)
+                |                                                                     
+                \------------------------------------------------ Chroicocephalu~ (30)
+                                                                                      
+
+      Phylogram (based on average branch lengths):
+
+                                                                                                                                                                                                                                                                                                                                                                                                                  /- Eudynamys_scolo~ (1)
+      |                                                                               
+      |-- Tyto_alba_MZ31~ (10)
+      |                                                                               
+      |                    /------- Apis_mellifera_~ (2)
+      |                  /-+                                                          
+      |                  | \- Drosophila_mel~ (11)
+      |      /-----------+                                                            
+      |      |           \--- Tribolium_casta~ (7)
+      |  /---+                                                                        
+      |  |   |                                /-------- Styela_plicata~ (31)
+      |  |   \--------------------------------+                                       
+      |  |                                    \------------------ Caenorhabditis~ (33)
+      |  |                                                                            
+      |  |  /- Rattus_norvegic~ (4)
+      | /+ /+                                                                         
+      | || |\- Mus_musculus_N~ (15)
+      | || |                                                                          
+      | || |/- Myotis_lucifugu~ (6)
+      | || |+                                                                         
+      | || |\- Pteropus_vampy~ (18)
+      | |\-+                                                                          
+      | |  |-- Ovis_aries_NC_0~ (9)
+      | |  |                                                                          
+      | |  |/- Canis_lupus_MH~ (26)
+      | |  ||                                                                         
+      | |  |+- Felis_catus_NC~ (27)
+      + |  ||                                                                         
+      | |  |\- Panthera_tigri~ (29)
+      | |  |                                                                          
+      | |  | / Homo_sapiens_C~ (24)
+      |-+  \-+                                                                        
+      | |    \ Pan_troglodyte~ (25)
+      | |                                                                             
+      | |--- Miichthys_miiu~ (28)
+      | |                                                                             
+      | \-- Caretta_carett~ (32)
+      |                                                                               
+      |/- Apteryx_austra~ (12)
+      ||                                                                              
+      ||- Dromaius_novae~ (16)
+      |+                                                                              
+      |\- Struthio_camel~ (19)
+      |                                                                               
+      |-- Gallus_gallus_N~ (5)
+      |                                                                               
+      |/- Anser_cygnoides~ (8)
+      ||                                                                              
+      ||- Cygnus_cygnus_~ (21)
+      |+                                                                              
+      |\- Anas_platyrhyn~ (17)
+      |                                                                               
+      |- Pelecanus_crisp~ (3)
+      |                                                                               
+      |- Spheniscus_dem~ (13)
+      |                                                                               
+      |- Aptenodytes_fo~ (23)
+      |                                                                               
+      |- Aquila_nipalen~ (20)
+      |                                                                               
+      |/- Corvus_brachyr~ (14)
+      |+                                                                              
+      |\- Taeniopygia_gu~ (22)
+      |                                                                               
+      \- Chroicocephalu~ (30)
+                                                                                      
+      |------------| 2.000 expected changes per site
+
+      Calculating tree probabilities...
+
+      Credible sets of trees (9 trees sampled):
+         50 % credible set contains 2 trees
+         90 % credible set contains 7 trees
+         95 % credible set contains 8 trees
+         99 % credible set contains 9 trees
+
+   Exiting mrbayes block
+   Reached end of file
+
+   Could not read command from stdin; quitting
+
+   Deleting previously defined characters
+   Deleting previously defined taxa
